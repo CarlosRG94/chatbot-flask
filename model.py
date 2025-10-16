@@ -49,7 +49,7 @@ for q,a in zip(questions_raw, answers_raw):
     answers_masked.append(a_masked)  # guardamos respuesta enmascarada tal cual (mantener placeholders)
 
 # Embedding model
-embed_model = SentenceTransformer("all-MiniLM-L6-v2")
+embed_model = SentenceTransformer("all-mpnet-base-v2")
 print("Generando embeddings del dataset...")
 question_embeddings = embed_model.encode(questions_masked, convert_to_tensor=True, show_progress_bar=True)
 
